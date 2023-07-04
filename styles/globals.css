@@ -6,6 +6,7 @@
   --foreground-rgb: 0, 0, 0;
   --background-start-rgb: 214, 219, 220;
   --background-end-rgb: 255, 255, 255;
+  --tw-bg-opacity: 0.5;
 }
 
 @media (prefers-color-scheme: dark) {
@@ -16,6 +17,35 @@
   }
 }
 
+* {
+  scrollbar-width: thin;
+  /* For Firefox */
+  scrollbar-color: rgb(23 23 23 / var(--tw-bg-opacity));
+  /* For Firefox */
+}
+
+*::-webkit-scrollbar {
+  width: 10px;
+  /* Adjust the width of the scrollbar */
+}
+
+*::-webkit-scrollbar-track {
+  background: rgb(23 23 23 / var(--tw-bg-opacity));
+  /* Background color of the scrollbar track */
+}
+
+*::-webkit-scrollbar-thumb {
+  background: rgb(23 23 23 / var(--tw-bg-opacity));
+  /* Color of the scrollbar thumb */
+  border-radius: 5px;
+  /* Round the edges of the scrollbar thumb */
+}
+
+*::-webkit-scrollbar-thumb:hover {
+  background: rgb(23 23 23 / var(--tw-bg-opacity));
+  /* Color of the scrollbar thumb on hover */
+}
+
 body {
   color: rgb(var(--foreground-rgb));
   background: linear-gradient(
@@ -24,4 +54,5 @@ body {
       rgb(var(--background-end-rgb))
     )
     rgb(var(--background-start-rgb));
+    
 }
